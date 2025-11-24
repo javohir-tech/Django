@@ -5,4 +5,5 @@ from .models import BlogPost
 class BlogPostView(ListView) :
     model = BlogPost ;
     template_name = 'blog.html'
+    
 # Create your views here.
