@@ -22,5 +22,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('homepage.urls'))
 ]
-
-print("URL configuration loaded successfully.")
