@@ -9,11 +9,14 @@
 </head>
 <body>
     <header>
-        <h1>Home Page</h1>
+       <a href="/"> <h1>Home Page</h1></a>
     </header>
     <main>
         {% block content %}
         {% endblock %}
     </main>
+    <footer>
+        <a href="{% url 'post_new' %}">Yangi post</a>
+    </footer>
 </body>
 </html>
