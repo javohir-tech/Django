@@ -3,4 +3,5 @@
     <h1>{{post.title}}</h1>
     <p>{{post.text}}</p>
     <p>{{post.author}}</p>
-{% endblock%}
+    <a href="{% url 'post_edit' post.pk %}">Tahrirlash</a>
+{% endblock %}
