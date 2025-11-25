@@ -13,5 +13,9 @@ class BlogPostView(ListView) :
 class BlogDetailView(DetailView) :
     model = BlogPost;
     template_name = 'blog_detail.html'
+    def get_context_data(self , **kwargs) :
+        context = super().get_context_data(**kwargs);
+        context['post'] = context['object']
+        return context
     
 # Create your views here.
