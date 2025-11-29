@@ -2,6 +2,22 @@
 {% block content %}
 
 <h1>salom</h1>
+{% if user.is_authenticated %}
+<p>hush kelipsiz {{user.username}}</p>
+<form action="{% url 'logout' %}" method="post"> {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Chiqish</button>
+
+</form>
+{% else %}
+<p>
+    <a href="{% url 'login'%}">
+        saytga kirish
+    </a>
+</p>
+{% endif %}
 {% for post in posts %}
 <article>
     <h2><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h2>
